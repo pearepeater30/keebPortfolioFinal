@@ -25,7 +25,6 @@ app.use('/uploads', express.static('uploads'))
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
 app.use("/gallery", galleryRouter)
 
 if(process.env.NODE_ENV === 'production') {
