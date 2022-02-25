@@ -8,7 +8,6 @@ const cors = require("cors")
 
 require("dotenv").config()
 
-var indexRouter = require("./routes/index");
 var galleryRouter = require("./routes/galleryRoute")
 
 //To be added
