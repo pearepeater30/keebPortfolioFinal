@@ -6,7 +6,8 @@
     "server": "node ./bin/www",
     "client": "npm run start --prefix client",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
+
   },
   "dependencies": {
     "body-parser": "^1.19.1",
