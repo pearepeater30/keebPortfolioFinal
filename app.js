@@ -28,6 +28,10 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/gallery", galleryRouter)
 
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '/client/build')))
+}
+
 app.use(bodyParser.urlencoded({extended: false}));
 
 // catch 404 and forward to error handler
