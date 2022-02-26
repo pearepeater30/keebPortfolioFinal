@@ -14,7 +14,7 @@ const AlbumComponent = (props) => {
         <div className="card-body">
           <div className ="col text-center">
             <h3>{props.item.board}</h3>
-            <Link type="button" className="btn btn-primary" state={{ item: props.item }} to={`/gallery/${props.item._id}`}>
+            <Link type="button" className="btn btn-primary" state={{ item: props.item }} to={`/${props.item._id}`}>
               Read More
             </Link>
           </div>

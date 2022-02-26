@@ -5,6 +5,8 @@ const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser")
 const cors = require("cors")
+const proxy = require('http-proxy-middleware')
+
 
 require("dotenv").config()
 
@@ -36,6 +38,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
+
+module.exports = function(app) {
+    // add other server routes to path array
+    app.use(proxy(['/api' ], { target: 'http://localhost:5000' }));
+}
 
 // Right before your app.listen(), add this:
 app.get("*", (req, res) => {
