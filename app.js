@@ -33,10 +33,10 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// module.exports = function (app) {
-//   // add other server routes to path array
-//   app.use(proxy(["/gallery"], { target: "http://localhost:5000" }));
-// };
+module.exports = function (app) {
+  // add other server routes to path array
+  app.use(proxy(["/gallery"], { target: "http://localhost:5000" }));
+};
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
