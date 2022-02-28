@@ -53,7 +53,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     displayGallery: () => {
       console.log("Dispatching...");
-      const url = "http://localhost:5000/";
+      const url = "https://keeb-portfolio.herokuapp.com/";
       axios
         .get(`${url}gallery`)
         .then((response) => {
