@@ -8,7 +8,7 @@ const AlbumComponent = (props) => {
       <div className="card shadow-sm py-2 mx-auto">
         <img
           className="rounded img-thumbnail mx-auto"
-          src={"http://localhost:5000/" + props.item.imageUrl}
+          src={"https://keeb-portfolio.herokuapp.com/" + props.item.imageUrl}
           alt=""
         ></img>
         <div className="card-body">
