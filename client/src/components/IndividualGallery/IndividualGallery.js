@@ -24,7 +24,7 @@ const IndividualGallery = (props) => {
         <div class="col-4"></div>
         <div class="col-8">
           <img
-            src={"http://localhost:5000/" + item.imageUrl}
+            src={"https://keeb-portfolio.herokuapp.com/" + item.imageUrl}
             class="img-fluid"
             alt=""
           ></img>
